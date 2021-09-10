@@ -10,7 +10,9 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 
-out
+build-cl 
+build-1
+build-g
 build
 .vscode/
 script.txt 
