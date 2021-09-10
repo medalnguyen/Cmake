@@ -10,11 +10,7 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 
-Libraries and Subdirectories/build
-multiple file/build
-Submodules/build
-Basics/build
-Basics/out/build
+build
 .vscode/
 script.txt 
 
