@@ -4,10 +4,21 @@ project(Learn)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
-add_subdirectory(Adder)
+# Tạo đường dẫn đến thư mục con
+add_subdirectory(include/Adder)
 
-target_include_directories(${PROJECT_NAME} PUBLIC Adder )
+add_subdirectory(include/GLFW)
 
-target_link_directories(${PROJECT_NAME} PRIVATE Adder)
+# Tạo ra thư viên trong folder build
+target_include_directories(${PROJECT_NAME} 
+    PUBLIC include/Adder 
+    PUBLIC include/GLFW/include 
+)
 
-target_link_libraries(${PROJECT_NAME} adder)
+# Liên kết với file source vời folder include
+target_link_directories(${PROJECT_NAME} 
+    PRIVATE include/Adder
+    PRIVATE include/GLFW/src
+)
+
+target_link_libraries(${PROJECT_NAME} adder glfw)
